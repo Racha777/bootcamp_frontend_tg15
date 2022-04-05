@@ -1,0 +1,61 @@
+.body{
+    display: flex;/*hacer que los items ocupen menos espacio, flexibiliza a los hijos*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;/*Alinea los hijos*/
+    background-image: url(https://wallpaperaccess.com/full/3777437.jpg);
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    background-position: center;
+    color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:0;
+}
+
+.header{
+    display: flex;/*Ocupar espacio minimo disponible*/
+}
+
+.header__image-container{
+    display: flex;
+    max-width: 256px;/*Tamaño del contenedor*/
+    border-radius: 50%;/*forma del contenedor*/
+    overflow: hidden;/*Esconde la imagen fuera del contenedor*/
+}
+
+.header__image{
+    width: 100%;/*Limitar la imagen al tamaño del contenedor*/
+}
+
+.footer{
+    display: flex;
+}
+
+.footer-nav{
+    display: flex;
+}
+
+.footer-nav-container{
+    display: flex;
+}
+
+.footer-nav__link-list{
+    display: flex;
+    gap: 1rem; /*Separar los hijos de flex*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-nav__link-item{
+
+}
+
+.footer-nav__link{
+    display: flex;
+    width: 1.5rem;
+}
+
+.footer-nav__link-image{
+    width: 100%;
+}
