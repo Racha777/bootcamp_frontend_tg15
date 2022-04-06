@@ -40,7 +40,7 @@
 
 .article-container{
     display:flex;
-    padding: 0 2rem;
+    padding: 0 em;
 }
 
 .article__card{
@@ -49,7 +49,7 @@
     gap: 0.75rem;
     background-color: #16181dbf;/*Color hexadecimal con transparencia*/
     max-width: 256px;
-    padding: 1rem;/*Suma tamaño al max-width*/
+    padding: 1em;/*Suma tamaño al max-width*/
     border-radius: 0.5rem;
     box-sizing: border-box;/*PAra que el pading no salga del max-width*/
 }
@@ -70,6 +70,14 @@
     font-size: 0.85rem;
     text-align: center;
     margin: 0;
+}
+
+.article__card-description::before{/*Pseudo-elemento cuando no se tiene acceso al html, solo al css*/
+    content: '🍳';
+}
+
+.article__card-description::after{
+    content: '🍳';
 }
 
 .footer{
@@ -99,6 +107,12 @@
 .footer-nav__link{
     display: flex;
     width: 1.75rem; /*1rem=16px*/
+    transition: all 0.5s;/*Tiempo en el que ocurren cambios en hover*/
+}
+
+.footer-nav__link:hover{/*pseudo-clase*/
+    filter: brightness(150%);
+    transform: scale(1.25) rotate(360deg);
 }
 
 .footer-nav__link-image{
