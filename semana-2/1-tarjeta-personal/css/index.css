@@ -2,11 +2,13 @@
     display: flex;/*hacer que los items ocupen menos espacio, flexibiliza a los hijos*/
     flex-direction: column;
     align-items: center;
-    justify-content: center;/*Alinea los hijos*/
+    justify-content: center;
+    gap:1.5rem;
     background-image: url(https://wallpaperaccess.com/full/3777437.jpg);
-    /*background-size: cover;*/
-    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+    min-height: 100vh;/*100% view heigh (tamaño de la ventana)*/
     color:white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin:0;
@@ -21,10 +23,53 @@
     max-width: 256px;/*Tamaño del contenedor*/
     border-radius: 50%;/*forma del contenedor*/
     overflow: hidden;/*Esconde la imagen fuera del contenedor*/
+    margin:0;
 }
 
 .header__image{
     width: 100%;/*Limitar la imagen al tamaño del contenedor*/
+}
+
+.main{
+    display:flex;
+}
+
+.article{
+    display:flex;
+}
+
+.article-container{
+    display:flex;
+    padding: 0 2rem;
+}
+
+.article__card{
+    display:flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background-color: #16181dbf;/*Color hexadecimal con transparencia*/
+    max-width: 256px;
+    padding: 1rem;/*Suma tamaño al max-width*/
+    border-radius: 0.5rem;
+    box-sizing: border-box;/*PAra que el pading no salga del max-width*/
+}
+
+.article__card-title{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+.article__card-keywords{
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+.article__card-description{
+    font-size: 0.85rem;
+    text-align: center;
+    margin: 0;
 }
 
 .footer{
@@ -41,10 +86,10 @@
 
 .footer-nav__link-list{
     display: flex;
-    gap: 1rem; /*Separar los hijos de flex*/
+    gap: 1rem; /*Separar los hijos*/
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style: none; /*Quitar la viñeta de cada elemento de la lista*/
 }
 
 .footer-nav__link-item{
@@ -53,9 +98,10 @@
 
 .footer-nav__link{
     display: flex;
-    width: 1.5rem;
+    width: 1.75rem; /*1rem=16px*/
 }
 
 .footer-nav__link-image{
     width: 100%;
 }
+
